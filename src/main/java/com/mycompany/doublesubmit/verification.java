@@ -47,12 +47,12 @@ public class verification extends HttpServlet {
             String receiver = request.getParameter("receiver");
             writer.println("Identification Number :" + identity);
             writer.println("Password :" + values);
-            writer.println("Token :" + receiver);
+            writer.println("Token Received:" + receiver);
             Cookie[] cookie = request.getCookies();
             String tokens = cookie[0].getValue();
             writer.println("token is :"+tokens);
             if (receiver.equals(tokens)) {
-                writer.println("Token has been verfied");
+                writer.println("Token has been verified");
             } else {
                 writer.println("Token verification has Failed");
             }
