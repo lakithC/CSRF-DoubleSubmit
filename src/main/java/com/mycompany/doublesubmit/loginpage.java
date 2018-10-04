@@ -65,7 +65,7 @@ public class loginpage extends HttpServlet {
                 HttpSession http = request.getSession();
                 http.setAttribute("username", username);
                 String tokentwo = tokens();
-                System.out.println("Token is :"+tokentwo);
+                System.out.println("Token :"+tokentwo);
                 Cookie cook = new Cookie(cookie[0].getValue(), tokentwo);
                 cookie[0].setValue(tokentwo);
                 cookie[0].setPath("/");
